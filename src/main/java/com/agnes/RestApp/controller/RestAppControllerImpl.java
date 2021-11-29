@@ -1,8 +1,8 @@
 package com.agnes.RestApp.controller;
 
+import com.agnes.RestApp.dto.CurrencyDto;
 import com.agnes.RestApp.dto.RatesDto;
 import com.agnes.RestApp.dto.SortDto;
-import com.agnes.RestApp.dto.CurrencyDto;
 import com.agnes.RestApp.exceptionHandling.EmptyListException;
 import com.agnes.RestApp.service.CurrencyService;
 import com.agnes.RestApp.service.PongService;
@@ -36,6 +36,7 @@ public class RestAppControllerImpl implements RestAppController {
     }
 
     @Override
+    @CrossOrigin
     public ResponseEntity <List<Integer>> postSortedNumbers(SortDto sortDto) {
 
         List<Integer> numbers = sortDto.getNumbers();
@@ -63,7 +64,4 @@ public class RestAppControllerImpl implements RestAppController {
 
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }
-
-
-
 }

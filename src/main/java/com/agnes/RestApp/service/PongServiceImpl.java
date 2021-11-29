@@ -20,7 +20,6 @@ public class PongServiceImpl implements PongService {
         if (log.isErrorEnabled()) {
             log.info("getPong()");
         }
-
         return pong.getPONG();
     }
 }

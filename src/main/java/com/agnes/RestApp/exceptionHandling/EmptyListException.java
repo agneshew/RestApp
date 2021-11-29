@@ -7,5 +7,4 @@ public class EmptyListException extends IllegalArgumentException{
     public EmptyListException() {
         super(EXCEPTION_MESSAGE);
     }
-
 }
